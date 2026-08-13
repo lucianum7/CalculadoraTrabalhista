@@ -1,0 +1,73 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "calculadora-trabalhista"
+version = "0.1.0"
+description = "Engine local e determinística para cálculos trabalhistas rastreáveis no padrão Magnum."
+readme = "README.md"
+requires-python = ">=3.12"
+license = { file = "LICENSE" }
+authors = [{ name = "CalculadoraTrabalhista contributors" }]
+keywords = ["labor-law", "calculations", "brazil", "trabalhista", "legaltech", "agent-skills", "pjecalc"]
+dependencies = [
+  "pydantic>=2.7,<3",
+  "typer>=0.12,<1",
+  "rich>=13.7,<15",
+  "openpyxl>=3.1,<4",
+  "PyYAML>=6.0,<7",
+  "python-dateutil>=2.9,<3",
+]
+
+[project.optional-dependencies]
+documents = ["python-docx>=1.1,<2", "PyMuPDF>=1.24,<2"]
+dev = [
+  "pytest>=8,<9",
+  "pytest-cov>=5,<7",
+  "hypothesis>=6.100,<7",
+  "ruff>=0.6,<1",
+  "mypy>=1.11,<2",
+  "types-PyYAML>=6.0.12",
+]
+
+[project.scripts]
+calculadora-trabalhista = "calculadora_trabalhista.cli.main:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+calculadora_trabalhista = ["py.typed"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+src = ["src", "tests", "scripts"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM"]
+# Textos jurídicos em português e fórmulas tornam algumas linhas naturalmente longas.
+ignore = ["B008", "E501"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+warn_unused_ignores = true
+ignore_missing_imports = true
+mypy_path = "src"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q --strict-markers"
+markers = [
+  "golden: deterministic golden compatibility tests",
+  "integration: end-to-end tests",
+]
+
+[tool.coverage.run]
+source = ["calculadora_trabalhista"]
+
+[tool.coverage.report]
+fail_under = 80
+show_missing = true
