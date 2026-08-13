@@ -1,0 +1,7 @@
+name: magnum
+description: Ordem de saída para petições e memórias no padrão Magnum.
+automatic_reflections: false
+output_order:
+  - termination
+  - principal
+  - reflection
