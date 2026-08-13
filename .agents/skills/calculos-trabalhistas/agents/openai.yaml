@@ -1,0 +1,5 @@
+name: calculos-trabalhistas
+display_name: Calculadora Trabalhista
+description: Engine local e auditável para cálculos trabalhistas com Decimal, proveniência e reflexos explícitos.
+entrypoint: ../../../../../../src/calculadora_trabalhista/cli/main.py
+skill: ../SKILL.md
