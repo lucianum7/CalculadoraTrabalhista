@@ -45,12 +45,12 @@ def export_xlsx(result: CalculationResult, output_dir: str | Path) -> tuple[Path
                 line.label,
                 line.competence,
                 line.category,
-                float(line.amount),
+                line.amount,
                 "; ".join(line.source_chain),
             ]
         )
     table.append([])
-    table.append(["", "Total econômico", "", "", float(result.total), ""])
+    table.append(["", "Total econômico", "", "", result.total, ""])
     table.freeze_panes = "A2"
     table.column_dimensions["B"].width = 44
     table.column_dimensions["F"].width = 64
@@ -68,13 +68,13 @@ def export_xlsx(result: CalculationResult, output_dir: str | Path) -> tuple[Path
                 line.order,
                 line.code,
                 line.formula,
-                float(line.amount),
+                line.amount,
                 "; ".join(line.source_chain),
                 line.legal_basis,
             ]
         )
     memory.append([])
-    memory.append(["", "", "Total econômico", float(result.total), "", ""])
+    memory.append(["", "", "Total econômico", result.total, "", ""])
     memory.freeze_panes = "A2"
     memory.column_dimensions["C"].width = 58
     memory.column_dimensions["E"].width = 64
