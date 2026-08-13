@@ -1,0 +1,67 @@
+{
+  "metadata": {"case_id": "SYNTHETIC-001", "description": "Caso fictício para testes; não contém dados reais."},
+  "process": {"mode": "SIMULATION"},
+  "parties": {"employee": "Pessoa Trabalhadora Fictícia", "employer": "Empresa Fictícia"},
+  "contracts": [
+    {
+      "admission": "2025-02-01",
+      "termination": "2026-01-31",
+      "termination_reason": "DISPENSA_SEM_JUSTA_CAUSA",
+      "role": "Analista",
+      "work_schedule": "5x2",
+      "weekly_hours": "44",
+      "divisor": "220",
+      "notice_days": "30",
+      "notice_type": "INDENIZADO",
+      "provenance": [{"status": "CONFIRMADO_USUARIO", "source_excerpt": "Dados do caso sintético", "confidence": "1"}]
+    }
+  ],
+  "salary_history": [
+    {"competence": "2025-02", "base_salary": "3000.00", "variable": "200.00", "additional": "0.00", "paid_overtime": "0.00", "paid_fgts": "0.00", "provenance": [{"status": "CONFIRMADO_DOCUMENTO", "document": "holerite_sintetico", "page": 1, "confidence": "1"}]},
+    {"competence": "2025-03", "base_salary": "3000.00", "variable": "200.00", "additional": "0.00", "paid_overtime": "0.00", "paid_fgts": "0.00", "provenance": [{"status": "CONFIRMADO_DOCUMENTO", "document": "holerite_sintetico", "page": 2, "confidence": "1"}]},
+    {"competence": "2025-04", "base_salary": "3000.00", "variable": "200.00", "additional": "0.00", "paid_overtime": "0.00", "paid_fgts": "0.00", "provenance": [{"status": "CONFIRMADO_DOCUMENTO", "document": "holerite_sintetico", "page": 3, "confidence": "1"}]},
+    {"competence": "2025-05", "base_salary": "3000.00", "variable": "200.00", "additional": "0.00", "paid_overtime": "0.00", "paid_fgts": "0.00", "provenance": [{"status": "CONFIRMADO_DOCUMENTO", "document": "holerite_sintetico", "page": 4, "confidence": "1"}]},
+    {"competence": "2025-06", "base_salary": "3000.00", "variable": "200.00", "additional": "0.00", "paid_overtime": "0.00", "paid_fgts": "0.00", "provenance": [{"status": "CONFIRMADO_DOCUMENTO", "document": "holerite_sintetico", "page": 5, "confidence": "1"}]},
+    {"competence": "2025-07", "base_salary": "3000.00", "variable": "200.00", "additional": "0.00", "paid_overtime": "0.00", "paid_fgts": "0.00", "provenance": [{"status": "CONFIRMADO_DOCUMENTO", "document": "holerite_sintetico", "page": 6, "confidence": "1"}]},
+    {"competence": "2025-08", "base_salary": "3000.00", "variable": "200.00", "additional": "0.00", "paid_overtime": "0.00", "paid_fgts": "0.00", "provenance": [{"status": "CONFIRMADO_DOCUMENTO", "document": "holerite_sintetico", "page": 7, "confidence": "1"}]},
+    {"competence": "2025-09", "base_salary": "3000.00", "variable": "200.00", "additional": "0.00", "paid_overtime": "0.00", "paid_fgts": "0.00", "provenance": [{"status": "CONFIRMADO_DOCUMENTO", "document": "holerite_sintetico", "page": 8, "confidence": "1"}]},
+    {"competence": "2025-10", "base_salary": "3000.00", "variable": "200.00", "additional": "0.00", "paid_overtime": "0.00", "paid_fgts": "0.00", "provenance": [{"status": "CONFIRMADO_DOCUMENTO", "document": "holerite_sintetico", "page": 9, "confidence": "1"}]},
+    {"competence": "2025-11", "base_salary": "3000.00", "variable": "200.00", "additional": "0.00", "paid_overtime": "0.00", "paid_fgts": "0.00", "provenance": [{"status": "CONFIRMADO_DOCUMENTO", "document": "holerite_sintetico", "page": 10, "confidence": "1"}]},
+    {"competence": "2025-12", "base_salary": "3000.00", "variable": "200.00", "additional": "0.00", "paid_overtime": "0.00", "paid_fgts": "0.00", "provenance": [{"status": "CONFIRMADO_DOCUMENTO", "document": "holerite_sintetico", "page": 11, "confidence": "1"}]},
+    {"competence": "2026-01", "base_salary": "3000.00", "variable": "200.00", "additional": "0.00", "paid_overtime": "0.00", "paid_fgts": "0.00", "provenance": [{"status": "CONFIRMADO_DOCUMENTO", "document": "holerite_sintetico", "page": 12, "confidence": "1"}]}
+  ],
+  "claims": [
+    {"code": "termination", "label": "Verbas rescisórias", "legal_basis": "Título sintético — hipótese de simulação", "provenance": [{"status": "CONFIRMADO_USUARIO", "source_excerpt": "Cenário fictício", "confidence": "1"}]},
+    {"code": "overtime", "label": "Horas extras", "legal_basis": "Parâmetro do caso sintético", "provenance": [{"status": "CONFIRMADO_USUARIO", "source_excerpt": "Cenário fictício", "confidence": "1"}]},
+    {"code": "variable_integration", "label": "Integração de verba variável", "legal_basis": "Parâmetro do caso sintético", "provenance": [{"status": "CONFIRMADO_USUARIO", "source_excerpt": "Cenário fictício", "confidence": "1"}]},
+    {"code": "fgts", "label": "FGTS", "legal_basis": "Parâmetro do caso sintético", "provenance": [{"status": "CONFIRMADO_USUARIO", "source_excerpt": "Cenário fictício", "confidence": "1"}]}
+  ],
+  "calculation_parameters": {
+    "divisor": "220",
+    "overtime_rate": "0.50",
+    "overtime_hours_by_competence": {"2025-02": "10.00", "2025-03": "10.00", "2025-04": "10.00"},
+    "overtime_paid_by_competence": {"2025-02": "0.00", "2025-03": "0.00", "2025-04": "0.00"},
+    "fgts_rate": "0.08",
+    "fgts_fine_rate": "0.40",
+    "fgts_paid_by_competence": {"2025-02": "0.00", "2025-03": "0.00", "2025-04": "0.00"},
+    "termination": {"salary_balance_days": "31", "notice_indemnified": true, "notice_days": "30", "vacation_proportional_avos": "12", "thirteenth_proportional_avos": "12"},
+    "reflection_graph": [
+      {"source": "overtime", "target": "vacations", "enabled": true, "legal_basis": "Configuração explícita do caso sintético", "calculation_method": "twelfth"},
+      {"source": "overtime", "target": "vacation_1_3", "enabled": true, "legal_basis": "Configuração explícita do caso sintético", "calculation_method": "third_of_twelfth"},
+      {"source": "overtime", "target": "thirteenth", "enabled": true, "legal_basis": "Configuração explícita do caso sintético", "calculation_method": "twelfth"},
+      {"source": "overtime", "target": "fgts", "enabled": true, "legal_basis": "Configuração explícita do caso sintético", "calculation_method": "fgts"},
+      {"source": "overtime", "target": "fgts_fine_40", "enabled": true, "legal_basis": "Configuração explícita do caso sintético", "calculation_method": "fgts_fine"},
+      {"source": "overtime", "target": "notice", "enabled": true, "legal_basis": "Configuração explícita do caso sintético", "calculation_method": "notice"},
+      {"source": "variable_integration", "target": "vacations", "enabled": true, "legal_basis": "Configuração explícita do caso sintético", "calculation_method": "twelfth"},
+      {"source": "variable_integration", "target": "vacation_1_3", "enabled": true, "legal_basis": "Configuração explícita do caso sintético", "calculation_method": "third_of_twelfth"},
+      {"source": "variable_integration", "target": "thirteenth", "enabled": true, "legal_basis": "Configuração explícita do caso sintético", "calculation_method": "twelfth"},
+      {"source": "variable_integration", "target": "fgts", "enabled": true, "legal_basis": "Configuração explícita do caso sintético", "calculation_method": "fgts"},
+      {"source": "variable_integration", "target": "fgts_fine_40", "enabled": true, "legal_basis": "Configuração explícita do caso sintético", "calculation_method": "fgts_fine"},
+      {"source": "variable_integration", "target": "notice", "enabled": true, "legal_basis": "Configuração explícita do caso sintético", "calculation_method": "notice"}
+    ],
+    "rules": {"synthetic": "not legal advice"},
+    "official_tables": {"source": "data/official/sources.json"}
+  },
+  "evidence": [{"id": "holerite_sintetico", "document_type": "contracheque", "filename": "synthetic", "pages": 12}],
+  "missing_information": []
+}
