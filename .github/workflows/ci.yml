@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --upgrade pip
+      - run: python -m pip install -e ".[dev]"
+      - run: ruff check .
+      - run: mypy .
+      - run: pytest --cov=calculadora_trabalhista --cov-report=term-missing
+      - run: python scripts/sync_skill_adapters.py
+      - shell: bash
+        run: git diff --exit-code -- skill/calculos-trabalhistas/SKILL.md .agents/skills/calculos-trabalhistas/SKILL.md .claude/skills/calculos-trabalhistas/SKILL.md
+      - run: calculadora-trabalhista doctor
+      - run: calculadora-trabalhista validate
