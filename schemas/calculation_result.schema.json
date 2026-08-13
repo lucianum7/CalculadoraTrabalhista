@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/lucianum7/CalculadoraTrabalhista/schemas/calculation_result.schema.json",
+  "title": "CalculationResult",
+  "type": "object",
+  "required": ["mode", "status", "lines", "audit", "totals"],
+  "properties": {
+    "mode": {"type": "string"},
+    "status": {"type": "string"},
+    "lines": {"type": "array"},
+    "audit": {"type": "array"},
+    "totals": {"type": "object"},
+    "missing_information": {"type": "array"},
+    "manifest": {"type": ["object", "null"]}
+  }
+}
