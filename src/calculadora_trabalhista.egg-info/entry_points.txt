@@ -1,2 +1,0 @@
-[console_scripts]
-calculadora-trabalhista = calculadora_trabalhista.cli.main:app
