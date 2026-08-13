@@ -1,0 +1,27 @@
+{
+  "schema_version": "1",
+  "sources": [
+    {
+      "id": "clt-planalto",
+      "title": "Consolidação das Leis do Trabalho",
+      "organization": "Presidência da República — Planalto",
+      "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452compilado.htm",
+      "type": "legislation",
+      "valid_from": "1943-05-01",
+      "valid_until": null,
+      "consulted_at": "2026-08-13",
+      "sha256": null
+    },
+    {
+      "id": "tst-pje-calc-cidadao",
+      "title": "PJe-Calc Cidadão — serviços do TST",
+      "organization": "Tribunal Superior do Trabalho",
+      "url": "https://www.tst.jus.br/portal-da-advocacia/outros-servicos",
+      "type": "methodological_reference",
+      "valid_from": null,
+      "valid_until": null,
+      "consulted_at": "2026-08-13",
+      "sha256": null
+    }
+  ]
+}
