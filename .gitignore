@@ -14,6 +14,7 @@ build/
 .env.*
 !example.env
 outputs/
+work/
 Tabela_Pedidos.xlsx
 Memoria_Calculo.xlsx
 calculation_manifest.json
