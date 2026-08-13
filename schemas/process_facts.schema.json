@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/lucianum7/CalculadoraTrabalhista/schemas/process_facts.schema.json",
+  "title": "ProcessFacts",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "metadata": {"type": "object"},
+    "process": {"type": "object"},
+    "parties": {"type": "object"},
+    "contracts": {"type": "array"},
+    "salary_history": {"type": "array"},
+    "timecards": {"type": "array"},
+    "claims": {"type": "array"},
+    "calculation_parameters": {"type": "object"},
+    "evidence": {"type": "array"},
+    "conflicts": {"type": "array"},
+    "missing_information": {"type": "array", "items": {"type": "string"}}
+  }
+}
