@@ -1,0 +1,10 @@
+engine_version: 0.1.0
+rounding:
+  quantization: '0.01'
+  mode: ROUND_HALF_UP
+network:
+  enabled: false
+  allowlist: []
+strict_missing_data: true
+official_tables:
+  source_registry: data/official/sources.json
