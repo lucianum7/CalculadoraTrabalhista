@@ -1,0 +1,4 @@
+name: generic
+description: Perfil neutro; nenhuma regra ou reflexo é presumido.
+automatic_reflections: false
+divisor: null
