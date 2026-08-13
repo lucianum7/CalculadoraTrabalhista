@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/lucianum7/CalculadoraTrabalhista/schemas/calculation_plan.schema.json",
+  "title": "CalculationPlan",
+  "type": "object",
+  "required": ["mode", "rules", "parameters"],
+  "properties": {
+    "mode": {"enum": ["INITIAL_CLAIM", "LIQUIDATION", "EXECUTION", "AUDIT", "SIMULATION"]},
+    "rules": {"type": "object"},
+    "parameters": {"type": "object"},
+    "reflection_graph": {"type": "array"}
+  }
+}
